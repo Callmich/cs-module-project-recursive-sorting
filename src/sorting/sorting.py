@@ -30,17 +30,20 @@ def merge_sort(arr):
     if len(arr) == 0:
         return arr
     elif len(arr) == 1:
-        pass # run merge
+        pass
+    elif len(arr) == 2:
+        merge([arr[0]], [arr[1]])
     else:
         arrLen = int(len(arr))
         for i in range(arrLen):
-            if i <= arrLen/2:
-                leftArr.append(i)
+            if i < arrLen/2:
+                leftArr.append(arr[i])
             else:
-                rightArr.append(i)
+                rightArr.append(arr[i])
 
-    # use merge function to put things together correctly
-
+        merge_sort(leftArr)
+        merge_sort(rightArr)
+    
 
     return arr
 
@@ -50,8 +53,10 @@ def merge_sort(arr):
 # or data structures; it can only re-use the memory it was given as input
 def merge_in_place(arr, start, mid, end):
     # Your code here
+    pass
 
 
 def merge_sort_in_place(arr, l, r):
     # Your code here
+    pass
 
