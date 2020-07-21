@@ -3,14 +3,37 @@ def merge(arrA, arrB):
     elements = len(arrA) + len(arrB)
     merged_arr = [0] * elements
 
-    # Your code here
+    for i in range(elements):
+        if arrA[0]<= arrB[0]:
+            merged_arr[i-1] = arrA[0]
+            arrA = arrA[1:]
+        else:
+            merged_arr[i-1] = arrA[0]
+            arrB = arrB[1:]
 
 
     return merged_arr
 
 # TO-DO: implement the Merge Sort function below recursively
 def merge_sort(arr):
-    # Your code here
+
+    leftArr = []
+    rightArr = []
+    
+    # recursively split list into lists of 1
+    if len(arr) == 0:
+        return arr
+    elif len(arr) == 1:
+        pass # run merge
+    else:
+        arrLen = int(len(arr))
+        for i in range(arrLen):
+            if i <= arrLen/2:
+                leftArr.append(i)
+            else:
+                rightArr.append(i)
+
+    # use merge function to put things together correctly
 
 
     return arr
