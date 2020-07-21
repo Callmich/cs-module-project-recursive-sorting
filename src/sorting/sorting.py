@@ -30,7 +30,7 @@ def merge_sort(arr):
     if len(arr) == 0:
         return arr
     elif len(arr) == 1:
-        pass
+        return arr
     else:
         arrLen = int(len(arr))
         for i in range(arrLen):
@@ -39,9 +39,7 @@ def merge_sort(arr):
             else:
                 rightArr.append(arr[i])
         
-        merge_sort(rightArr)
-        merge_sort(leftArr)
-        merge(rightArr, leftArr)
+        merge(merge_sort(leftArr), merge_sort(rightArr))
         
     
 
