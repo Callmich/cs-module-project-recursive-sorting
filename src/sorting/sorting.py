@@ -31,8 +31,6 @@ def merge_sort(arr):
         return arr
     elif len(arr) == 1:
         pass
-    elif len(arr) == 2:
-        merge([arr[0]], [arr[1]])
     else:
         arrLen = int(len(arr))
         for i in range(arrLen):
@@ -40,9 +38,11 @@ def merge_sort(arr):
                 leftArr.append(arr[i])
             else:
                 rightArr.append(arr[i])
-
-        merge_sort(leftArr)
+        
         merge_sort(rightArr)
+        merge_sort(leftArr)
+        merge(rightArr, leftArr)
+        
     
 
     return arr
