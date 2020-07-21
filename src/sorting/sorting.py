@@ -4,11 +4,17 @@ def merge(arrA, arrB):
     merged_arr = [0] * elements
 
     for i in range(elements):
-        if arrA[0]<= arrB[0]:
-            merged_arr[i-1] = arrA[0]
+        if len(arrA) == 0:
+            merged_arr[i] = arrB[0]
+            arrB = arrB[1:]
+        elif len(arrB) == 0:
+            merged_arr[i] = arrA[0]
+            arrA = arrA[1:]
+        elif arrA[0]<= arrB[0]:
+            merged_arr[i] = arrA[0]
             arrA = arrA[1:]
         else:
-            merged_arr[i-1] = arrA[0]
+            merged_arr[i] = arrB[0]
             arrB = arrB[1:]
 
 
