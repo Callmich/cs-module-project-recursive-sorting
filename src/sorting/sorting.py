@@ -38,8 +38,7 @@ def merge_sort(arr):
                 leftArr.append(arr[i])
             else:
                 rightArr.append(arr[i])
-        
-        merge(merge_sort(leftArr), merge_sort(rightArr))
+        return merge(merge_sort(leftArr), merge_sort(rightArr))
         
     
 
