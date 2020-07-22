@@ -16,16 +16,12 @@ def merge(arrA, arrB):
         else:
             merged_arr[i] = arrB[0]
             arrB = arrB[1:]
-
-
     return merged_arr
 
 # TO-DO: implement the Merge Sort function below recursively
 def merge_sort(arr):
-
     leftArr = []
     rightArr = []
-    
     # recursively split list into lists of 1
     if len(arr) == 0:
         return arr
